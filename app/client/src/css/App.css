@@ -1,0 +1,139 @@
+@import 'normalize.css';
+@import 'skeleton.css';
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../fonts/Inconsolata-Regular.ttf')  format('truetype')
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Inconsolata', serif;
+  font-size: 14px;
+  color: #dfe1e8;
+  background: #5536c5;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #5536c5 0%, #783bc3 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #5536c5 0%, #783bc3 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #5536c5 0%, #783bc3 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5536c5', endColorstr='#783bc3',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.json {
+    white-space: pre-wrap;
+    color: #cec1ff;
+}
+
+.pre {
+  white-space: pre-wrap;
+}
+
+.pre, .line {
+  color: #e9967a;
+}
+
+.greeting {
+  color: #e9967a;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.heading1 {
+  text-align: center;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50px;
+  left:0;
+  right: 0;
+}
+
+.inner {
+  position: relative;
+  width: 820px;
+  margin: 0 auto;
+}
+
+.window {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.footer span {
+  text-decoration: underline;
+}
+
+a, a:hover, a:visited  {
+  color: #e9967a;
+}
+
+#app, div.terminal {
+  height: 100%;
+  word-wrap: break-word;
+}
+div#main {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.63);
+  border-radius: 0 0 5px 5px;
+  height: 400px;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.59);
+  -moz-box-shadow:    0px 0px 13px 0px rgba(50, 50, 50, 0.59);
+  box-shadow:         0px 0px 13px 0px rgba(50, 50, 50, 0.59);
+  overflow: auto;
+  text-align: center;
+}
+.keeper {
+    overflow: auto;
+    text-align: left;
+}
+.prompt {
+  margin-right: 7px;
+  color: #f9f9f9;
+}
+input[type=text], input[type=text]:focus {
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 22px;
+  background: transparent;
+  color: #f9f9f9;
+  width: 80%;
+}
+p {
+  margin-bottom: 0;
+  line-height: 21px;
+}
+#top {
+  height: 30px;
+  width: 100%;
+  background: black;
+  border-radius: 5px 5px 0 0;
+}
+#content {
+  padding: 0 20px;
+  height: 100%;
+}
+
+.rotate {
+  display: inline-block;
+  margin-right: 2px;
+  transform: rotate(-180deg);
+  /* Safari */
+  -webkit-transform: rotate(-180deg);
+  /* Firefox */
+  -moz-transform: rotate(-180deg);
+  /* IE */
+  -ms-transform: rotate(-180deg);
+  /* Opera */
+  -o-transform: rotate(-180deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+}

@@ -1,0 +1,33 @@
+version: '3'
+services:
+  helloworld:
+    image: geeny/helloworld-local
+    build:
+      context: ./app
+    depends_on:
+      - subscription-service
+      - authentication-service
+    ports:
+      - 8080:8080
+    environment:
+      NODE_PORT: 8080
+      APP_NAME: example
+      GEENY_APPBROKER: http://subscription-service:1319/app
+      GEENY_CONNECT: http://authentication-service:3000
+      GEENY_CONNECT_KEY: ''
+  subscription-service:
+    image: geeny/subscription-service-local
+    volumes:
+      - ./data:/app/data
+    ports:
+      - 1319:1319
+    environment:
+      GEENY_BIND_ADDRESS: :1319
+      GEENY_CONSUMER_TYPE: LOCAL
+      GEENY_CONSUMER_FOLDER: data
+      GEENY_CHECKPOINT_TYPE: IN_MEMORY
+      GEENY_ITERATOR_TYPE: IN_MEMORY
+  authentication-service:
+    image: geeny/oauth2-local
+    ports:
+      - 3000:3000
